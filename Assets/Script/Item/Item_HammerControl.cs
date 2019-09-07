@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * 해머 아이템의 동작을 구현한다
+ */
 public class Item_HammerControl : MonoBehaviour {
 
     public GameObject Player;
@@ -11,7 +14,10 @@ public class Item_HammerControl : MonoBehaviour {
     {
         Player = GameObject.FindWithTag("Player");
     }
-   
+
+    /*
+     * 플레이어와 충돌 시의 동작
+     */
     void OnTriggerEnter(Collider col)
     {      
         if (col.tag == "Player")
