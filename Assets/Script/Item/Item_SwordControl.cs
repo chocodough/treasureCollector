@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,9 +18,9 @@ public class Item_SwordControl : MonoBehaviour {
      */  
     void OnTriggerEnter(Collider col){
         if (col.tag == "Player") {
-            Player.GetComponent<PlayerControl>().getSword = true;
+            Player.GetComponent<PlayerControl>().GetSword = true;
             Destroy(transform.parent.gameObject);
-            AudioSource.PlayClipAtPoint(AudioClip,transform.position);
+            AudioSource.PlayClipAtPoint(audioClip ,transform.position);
         }
     }
 }

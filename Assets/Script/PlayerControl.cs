@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
-
+    // 오디오 파일
     public AudioSource PlayerSound;
     public AudioClip JumpSound;
     public AudioClip CoinSound;
@@ -22,8 +22,8 @@ public class PlayerControl : MonoBehaviour {
     public bool Clear = false;
     public GameObject StageClearManager;
 
-    public enum PlayerState 
-    {
+    //플레이어의 상태
+    public enum PlayerState{
         idle = 0,
         walk ,
         run ,
@@ -35,18 +35,19 @@ public class PlayerControl : MonoBehaviour {
     }   
     public PlayerState ps = PlayerState.idle;  // 플레이어의 상태 변수
 
-    public enum CurrentWeapon
-    {
+    //무기 종류
+    public enum CurrentWeapon{
         hand,
         sword,
         hammer
     }
 
-    public CurrentWeapon cw = CurrentWeapon.hand;  // 현재 무기 변수
+    // 현재 무기 변수
+    public CurrentWeapon cw = CurrentWeapon.hand;  
 
-
+    //새 무기들을 얻었는지 확인
     public bool GetSword = false;
-    public bool GetHammer = false;  //새 무기들을 얻었는지 확인
+    public bool GetHammer = false;  
 
     public Animator PlayerAC;
 
@@ -231,7 +232,10 @@ public class PlayerControl : MonoBehaviour {
         }
     }
 
-    void WeaponChange() // 현재 무기 교체
+    /*
+     * 손에 든 무기를 교체한다
+     */
+    void WeaponChange() 
     {        
         
         
