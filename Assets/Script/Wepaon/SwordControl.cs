@@ -1,12 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SwordControl: MonoBehaviour {
-
     public GameObject Player;
    
-	// Use this for initialization
 	void Start () {
         Player = GameObject.FindWithTag("Player");
 	}
@@ -40,6 +38,5 @@ public class SwordControl: MonoBehaviour {
                 col.gameObject.SendMessage("Open");
             }
         }
-
     }
 }
