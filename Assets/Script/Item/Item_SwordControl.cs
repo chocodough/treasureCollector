@@ -2,25 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * 소드 아이템의 동작을 구현한다
+ */
 public class Item_SwordControl : MonoBehaviour {
-
     public GameObject Player;
-    public AudioClip aa;
+    public AudioClip audioClip;
 
-    void Start()
-    {
-        Player = GameObject.FindWithTag("Player");
+    void Start(){
+      Player = GameObject.FindWithTag("Player");
     }
-    void OnTriggerEnter(Collider col)
-    {
-        
-        if (col.tag == "Player")
-        {
+    
+    /*
+     * 플레이어와 충돌 시의 동작
+     */  
+    void OnTriggerEnter(Collider col){
+        if (col.tag == "Player") {
             Player.GetComponent<PlayerControl>().GetSword = true;
             Destroy(transform.parent.gameObject);
             AudioSource.PlayClipAtPoint(aa, transform.position);
-
         }
     }
-
 }
