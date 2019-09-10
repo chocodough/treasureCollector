@@ -5,7 +5,7 @@
 
 ## 게임의 진행
 
-<img src="images/3.png" width="200px" style="display: inline-block;"> <img src="images/4.png" width="210px" style="display: inline-block;">
+<img src="Images/3.png" width="200px" style="display: inline-block;"> <img src="Images/4.png" width="210px" style="display: inline-block;">
 
 - 게임은 플레이어가 여러 섬을 돌아다니며 보물을 수집하는 방식으로 진행한다.
 
@@ -21,12 +21,12 @@
 - 플레이어와 아이템(보물상자, 스위치 등)은 모두 FSM(Finite State machine)에 따라 동작하도록 구현했다.
 
 예시) 플레이어의 FSM
-<img src="images/1.png">
+<img src="Images/1.png">
 
 위 그림은 플레이어의 FSM으로, 회색 박스는 각각의 상태를 나타내며 고유의 에니메이션을 갖는다. 플레이어는 키보드 입력, 타 객체와의 상호작용(주로 충돌)에 따라 상태가 변화하게 된다.
 
 ## 프로젝트의 특징 - 손쉬운 확장
-<img src="images/5.png">
+<img src="Images/5.png">
 
 캐릭터와 상호작용하는 아이템들에는 Prefap이 적용되어 추가와 삭제가 용이하다. 그 크기 또한 맵의 블록 1개와 같은 크기를 가지므로, 퍼즐 게임을 만들듯이 새 스테이지를 추가할 수 있다.
 
